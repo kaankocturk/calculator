@@ -2,6 +2,7 @@
 var temp = 0;
 var sign = '';
 document.addEventListener('DOMContentLoaded',function(){
+  alert('I only lack chain operations. Just get your *ss to use the = operator, we have suffered enough! :)')
 ac();
 document.onclick=function(event){
   if(event.target.classList.contains('num')){
@@ -35,7 +36,7 @@ else{alert('THOU SHALT NOT TRICK ME!');
 ac();}
 }
 function plus(){
-  temp = parseInt(document.getElementsByClassName('result')[0].textContent) ;
+  temp = parseFloat(document.getElementsByClassName('result')[0].textContent) ;
   document.getElementsByClassName('result')[0].textContent = '';
   sign = 'plus';
 }
@@ -44,18 +45,18 @@ function minus(){
     document.getElementsByClassName('result')[0].textContent='-';
   }
   else{
-  temp = parseInt(document.getElementsByClassName('result')[0].textContent) ;
+  temp = parseFloat(document.getElementsByClassName('result')[0].textContent) ;
   document.getElementsByClassName('result')[0].textContent = '';
   sign = 'minus';
 }
 }
 function x(){
-  temp = parseInt(document.getElementsByClassName('result')[0].textContent) ;
+  temp = parseFloat(document.getElementsByClassName('result')[0].textContent) ;
   document.getElementsByClassName('result')[0].textContent = '';
   sign = 'x';
 }
 function divide(){
-  temp = parseInt(document.getElementsByClassName('result')[0].textContent) ;
+  temp = parseFloat(document.getElementsByClassName('result')[0].textContent) ;
   document.getElementsByClassName('result')[0].textContent = '';
   sign = '/';
 }
@@ -66,14 +67,14 @@ function ac(){
 }
 function negate(){
   console.log('sdfsd');
-  var negation = parseInt(document.getElementsByClassName('result')[0].textContent);
+  var negation = parseFloat(document.getElementsByClassName('result')[0].textContent);
    document.getElementsByClassName('result')[0].textContent= negation*(-1);
 }
 function percent(){
-  document.getElementsByClassName('result')[0].textContent = parseInt(document.getElementsByClassName('result')[0].textContent)/100;
+  document.getElementsByClassName('result')[0].textContent = parseFloat(document.getElementsByClassName('result')[0].textContent)/100;
 }
 function equals(){
-  var result = parseInt(document.getElementsByClassName('result')[0].textContent);
+  var result = parseFloat(document.getElementsByClassName('result')[0].textContent);
   switch(sign) {
     case 'plus':
         document.getElementsByClassName('result')[0].textContent=result + temp;
